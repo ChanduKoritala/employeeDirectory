@@ -25,12 +25,6 @@ class App extends Component {
         <Title>Employee Directory</Title>
           <EmployeeCard
             employee= {this.state.employee}
-            filterLocation={this.filterLocation}
-            id ={employee.id}
-            name ={employee.name}
-            occupation={employee.occupation}
-            location={employee.location}
-            dob={employee.dob}
           />
       </Wrapper>
     );
