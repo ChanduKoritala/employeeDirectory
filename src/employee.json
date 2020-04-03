@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Bob",
+    "occupation": "Manager",
+    "location": "Adelaide",
+    "dob": "10/01/1970"
+  },
+  {
+    "id": 2,
+    "name": "John",
+    "occupation": "Lead",
+    "location": "Adelaide",
+    "dob": "05/02/1972"
+  },
+  {
+    "id": 3,
+    "name": "Chris",
+    "occupation": "Business Analyst",
+    "location": "Melbourne",
+    "dob": "08/03/1974"
+  },
+  {
+    "id": 4,
+    "name": "David",
+    "occupation": "Developer",
+    "location": "Melbourne",
+    "dob": "12/04/1976"
+  },
+  {
+    "id": 5,
+    "name": "Nick",
+    "occupation": "Developer",
+    "location": "Sydney",
+    "dob": "09/05/1978"
+  },
+  {
+    "id": 6,
+    "name": "Reza",
+    "occupation": "Developer",
+    "location": "Sydney",
+    "dob": "14/06/1980"
+  },
+  {
+    "id": 7,
+    "name": "Martin",
+    "occupation": "Software Tester",
+    "location": "Brisbane",
+    "dob": "11/07/1982"
+  },
+  {
+    "id": 8,
+    "name": "Mayank",
+    "occupation": "Software Tester",
+    "location": "Brisbane",
+    "dob": "16/08/1984"
+  },
+  {
+    "id": 9,
+    "name": "Tom",
+    "occupation": "Software Tester",
+    "location": "Brisbane",
+    "dob": "13/09/1986"
+  }
+  
+]
