@@ -4,11 +4,13 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import FilterBox from "./components/FilterBox"
 import employees from "./employee.json";
+import Sort from "./components/Sort"
 
 class App extends Component {
   // Setting this.state.employee to the employee json array 
   state = {
-    employees
+    employees,
+    sort: ''
   };
 
   filterEmployeeByLocation = (location = "adelaide") => {
@@ -23,6 +25,8 @@ class App extends Component {
     let location = e.target.value;
     this.filterEmployeeByLocation(location);
   }
+
+  
   
   // Map over this.state.employee and render a EmployeeCard component for each employee object
   render() {
@@ -30,6 +34,7 @@ class App extends Component {
       <Wrapper>
         <Title>Employee Directory</Title>
         <FilterBox handleInput= {this.handleInput}/>
+        <Sort handleSort= {this.handleSort}/>
         {this.state.employees.map( employee => <EmployeeCard employee= {employee} />)}
       </Wrapper>
     );
