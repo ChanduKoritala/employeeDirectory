@@ -12,8 +12,6 @@ class App extends Component {
     employees,
   };
 
-  
-
   filterEmployeeByLocation = (location = "adelaide") => {
     let filterLocation = employees.filter((employee) => {
       console.log(this);
@@ -28,30 +26,45 @@ class App extends Component {
   }
 
   handleSort = (e) => {
-    let sortedEmployees = [...employees];
-    sortedEmployees.sort((a, b) => {
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    })
-
-  }
-
-    // Map over this.state.employee and render a EmployeeCard component for each employee object
-    render() {
-      return (
-        <Wrapper>
-          <Title>Employee Directory</Title>
-          <FilterBox handleInput={this.handleInput} />
-          <Sort handleSort={this.handleSort} />
-          {this.state.employees.map(employee => <EmployeeCard employee={employee} />)}
-        </Wrapper>
-      );
+    let sortedEmployees = this.state.employees;
+    if (e.target.value === "asc") {
+      sortedEmployees.sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      })
+      this.setState({ employees: sortedEmployees });
+    } else if (e.target.value === "desc") {
+      sortedEmployees.sort((a, b) => {
+        if (a.name < b.name) {
+          return 1;
+        }
+        if (a.name > b.name) {
+          return -1;
+        }
+        return 0;
+      })
+      this.setState({employees: sortedEmployees});
     }
   }
 
-  export default App;
+  // Map over this.state.employee and render a EmployeeCard component for each employee object
+  render() {
+    return (
+      <Wrapper>
+        <Title>Employee Directory</Title>
+        <div>
+        <FilterBox handleInput={this.handleInput}/>
+        <Sort handleSort={this.handleSort} /> 
+        </div>
+         {this.state.employees.map(employee => <EmployeeCard employee={employee}/>)}  
+      </Wrapper>
+    );
+  }
+}
+
+export default App;

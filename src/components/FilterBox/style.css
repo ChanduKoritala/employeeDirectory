@@ -1,3 +1,5 @@
 .search {
     float:left;
+    max-width: 350px;
+    height: 35px;
 }

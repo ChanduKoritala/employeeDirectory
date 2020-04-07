@@ -4,8 +4,9 @@ import "./style.css";
 function Sort(props) {
     return (
         <select className= "select" defaultValue ="Sort" onChange= {props.handleSort}>
-        <option value= "Name">Sort by Ascending Order</option>
-        <option value= "Date Of Birth">Sort by Descending Order</option>
+        <option value= "selectOption">Select any option to sort</option>    
+        <option className = "ascending" value= "asc">Sort by Ascending Order</option>
+        <option className = "descending" value= "desc">Sort by Descending Order</option>
         </select>
     )
 };
