@@ -8,10 +8,10 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 2. NodeJS
 3. ReactJS
 
-## Filter user by location
+## Filter employees by location
 ![](public/images/Filtering.PNG)
 
-## Sort by Ascending/Descending Order
+## Sort emplaoyees by Ascending/Descending Order
 ![](public/images/Sorting.PNG)
 
 ## URL to the Deployed Application
